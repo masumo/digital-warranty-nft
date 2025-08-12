@@ -1,0 +1,43 @@
+{
+  "name": "digital-warranty-nft",
+  "version": "1.0.0",
+  "description": "Digital warranty system using NFT and smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mumbai": "npx hardhat run scripts/deploy.js --network mumbai",
+    "node": "npx hardhat node",
+    "backend": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "dev": "concurrently \"npm run node\" \"npm run backend\"",
+    "clean": "npx hardhat clean"
+  },
+  "keywords": [
+    "nft",
+    "warranty",
+    "blockchain",
+    "ethereum"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "concurrently": "^8.2.2",
+    "hardhat": "^2.17.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0"
+  }
+}
