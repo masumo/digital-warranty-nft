@@ -82,19 +82,28 @@ digital-warranty-nft/
     * Fill the `.env` file with your credentials. You can get RPC URLs from Infura and a private key from MetaMask.
     ```
     # Blockchain Configuration
-    SEPOLIA_RPC_URL="[https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID](https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID)"
-    MUMBAI_RPC_URL="[https://polygon-mumbai.infura.io/v3/YOUR_INFURA_PROJECT_ID](https://polygon-mumbai.infura.io/v3/YOUR_INFURA_PROJECT_ID)"
-    PRIVATE_KEY="your_private_key_here"
-    ETHERSCAN_API_KEY="your_etherscan_api_key"
-
+    # Network Configuration
+    SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID
+    POLYGON_MUMBAI_RPC_URL=https://polygon-mumbai.infura.io/v3/YOUR_INFURA_PROJECT_ID
+    PRIVATE_KEY=your_metamask_private_key_here
+    
     # Backend Configuration
     PORT=3000
-    MONGODB_URI="mongodb+srv://<user>:<password>@<cluster>.mongodb.net/warranty_system"
-    JWT_SECRET="your_jwt_secret_here"
-
-    # Contract Address (will be filled after deployment)
+    NODE_ENV=development
+    MONGODB_URI=mongodb://127.0.0.1:27017/warranty_system
+    
+    # JWT Configuration
+    JWT_SECRET=your_super_secret_jwt_key_here
+    JWT_EXPIRE=7d
+    
+    # Contract Addresses (will be filled after deployment)
     CONTRACT_ADDRESS=
-    ```
+    SEPOLIA_CONTRACT_ADDRESS=
+    MUMBAI_CONTRACT_ADDRESS=
+    
+    # Etherscan API (untuk contract verification)
+    ETHERSCAN_API_KEY=your_etherscan_api_key
+    POLYGONSCAN_API_KEY=your_polygonscan_api_key
 
 4.  **Compile the Smart Contract:**
     Run the following command to compile the smart contract and generate the required ABI files:
